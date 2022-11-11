@@ -1,33 +1,34 @@
+import junit.framework.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class DiceTest {
 
     @Test
     public void diceConstructorTest(){
         //given when then
-
         Dice dice = new Dice(2);
-
+        int expected= 2;
+        int actual= dice.getNumberOfDice();
+        Assert.assertEquals(expected, actual);
+        //to test the constructor, you call the getter method because the field is private
+        //because you call the getter method there is no need to test the getter
+        //all there is left to do is test the settter
     }
     @Test
     public void rollTest(){
         Dice dice = new Dice(2);
-         dice.roll(2);
 
-    }
-
-    @Test
-    public void testGetNumOfSides() {
-
-    }
-    @Test
-    public void testSetNumOfSides() {
-    }
-    @Test
-    public void testGetNumOfDice() {
+        assertFalse(dice.roll() == 0);
+        System.out.println(dice.roll());
     }
     @Test
     public void testSetNumOfDice() {
+        Dice dice = new Dice(10);
+        dice.setNumberOfDice(4);
+        assertTrue (dice.getNumberOfDice() == 4);
+
     }
 
     //I want a roll method
