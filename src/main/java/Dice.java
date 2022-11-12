@@ -4,36 +4,47 @@ import java.util.Scanner;
 
 public class Dice {
     private int numberOfDice;
-    public Dice(int numberOfDice){
+
+    public Dice(int numberOfDice) {
         //the number of dice in the field is the same number of dice in the parameter
         //this constructor allows you to make a new dice object and sets the number of dice
         this.numberOfDice = numberOfDice;
     }
-    public int getNumberOfDice() {
-        return numberOfDice;
-    }
-
-    public void setNumberOfDice(int numberOfDice) {
-        this.numberOfDice = numberOfDice;
-    }
+//    public int getNumberOfDice() {
+//        return numberOfDice;
+//    }
+//
+//    public void setNumberOfDice(int numberOfDice) {
+//        this.numberOfDice = numberOfDice;
+//    }
 
     //create a dice class that acts like a set of N random tossed dies
     //fields include numberOfDice
 
-    public int roll(){
-        int result = 0;
-        for (int i = ; i >= 0; i--){
-            result = (int) (Math.random()* 6 +1);
-            if (i == 0){
-                break;
-            }
-        } return result;
+    //    public static int getUserInput(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("How many die?");
+//        return scanner.nextInt();
+//    }
+//
+    public int tossAndSum(int numberOfDice) {
+        int results =0;
+        int currentNumber = 0;
+        for (int i = 1; i <= numberOfDice; i++) {
+            currentNumber = (int) ((Math.random() * 6) + 1);
+            results= results + currentNumber;
+            System.out.println(results);
+        }
 
+        return results;
     }
-
-
-
 }
+//
+//    public static void main(String[] args) {
+//        getUserInput();
+//        roll();
+//    }
+
 //    int numOfDice;
 ////    int rollResult;
 //    public Dice(int numOfDice){
