@@ -3,12 +3,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Dice {
-    private int numberOfDice;
-
-    public Dice(int numberOfDice) {
+    int numOfDice;
+    public Dice(int numOfDice) {
+        this.numOfDice = numOfDice;
         //the number of dice in the field is the same number of dice in the parameter
         //this constructor allows you to make a new dice object and sets the number of dice
-        this.numberOfDice = numberOfDice;
+//        this.numberOfDice = numberOfDice;
     }
 //    public int getNumberOfDice() {
 //        return numberOfDice;
@@ -27,15 +27,14 @@ public class Dice {
 //        return scanner.nextInt();
 //    }
 //
-    public int tossAndSum(int numberOfDice) {
+    public int tossAndSum() {
         int results =0;
         int currentNumber = 0;
-        for (int i = 1; i <= numberOfDice; i++) {
+        for (int i = 1; i <= numOfDice; i++) {
             currentNumber = (int) ((Math.random() * 6) + 1);
             results= results + currentNumber;
-            System.out.println(results);
         }
-
+        System.out.println(results);
         return results;
     }
 }

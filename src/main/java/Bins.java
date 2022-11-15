@@ -1,16 +1,18 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Bins {
 
     int binMin;
     int binMax;
 
-    ArrayList<Integer> bin;
+    HashMap<Integer, Integer> resultsMap = new HashMap<Integer, Integer>();
 
     public Bins(int binMin, int binMax) {
-        this.binMax = binMax;
         this.binMin = binMin;
+        this.binMax = binMax;
+        for(Integer i = binMin; i <= binMax; i++){
+            resultsMap.put(i,0);
+        }
     }
 
     public int getBinMin() {
@@ -23,21 +25,19 @@ public class Bins {
 
     //returns the number of times the value assigned to parameter shows up in the corresponding bin
     public int getBin(Integer resultNumber) {
-        return bin.indexOf(resultNumber);
+        return resultsMap.get(resultNumber);
 
     }
+
+    //this increments the bin number...
 
     public void incrementBin(Integer resultNumber) {
-        int numOfNum = 0;
-        for (int i = 0; i < bin.size(); i++) {
-            if (i == resultNumber) {
-                bin.set(resultNumber, numOfNum);
-                numOfNum++;
-
-            }
-        }
-//        bin.indexOf(resultNumber);
+        int valueOfKey = resultsMap.get(resultNumber);
+        valueOfKey++;
+        resultsMap.put(resultNumber, valueOfKey);
     }
+
+
 }
 
 
