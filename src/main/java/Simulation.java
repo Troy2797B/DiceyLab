@@ -1,18 +1,18 @@
 public class Simulation {
-    Simulation sim = new Simulation();
+
     Integer numberOfDies;
     Integer numberOfTosses;
+    private int binMax;
+    private int binMin;
+    Bins bins = new Bins(binMin, binMax);
 
-    public Simulation(){
+
+    public Simulation(Integer numberOfTosses, Integer numberOfDies){
         this.numberOfDies = numberOfDies;
         this.numberOfTosses = numberOfTosses;
     }
 
-    public double percentageOfAmount(Integer numberOfTosses, Integer numberOfDies){
-        Dice dice = new Dice(numberOfDies);
-        Double percentage = (double) (dice.tossAndSum() / numberOfTosses);
-        return percentage *100;
-    }
+
     public static void main(String[] args) {
 
     }

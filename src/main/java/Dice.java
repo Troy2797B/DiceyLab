@@ -28,7 +28,7 @@ public class Dice {
 //    }
 //
     public int tossAndSum() {
-        int results =0;
+        int results = 0;
         int currentNumber = 0;
         for (int i = 1; i <= numOfDice; i++) {
             currentNumber = (int) ((Math.random() * 6) + 1);

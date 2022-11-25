@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BinsTest {
 
@@ -44,6 +45,17 @@ public class BinsTest {
        Integer expected = 1;
        Integer actual = bin.resultsMap.get(18);
       assertEquals(expected, actual);
+    }
+
+    @Test
+    public void percentageOfAmountTest(){
+        //given
+        Integer numberOfTosses = 1;
+        Integer numberOfDies = 2;
+        //when
+        //then
+        double actual = bin.resultsMap.percentageOfAmount();
+        assertTrue(actual != 0);
     }
 //    @Test
 //    public double percentageOfAmountTest(){

@@ -37,6 +37,20 @@ public class Bins {
         resultsMap.put(resultNumber, valueOfKey);
     }
 
+    public double percentageOfAmount(HashMap<Integer, Integer> resultsMap){
+
+//        double crazyDecimal = resultsMap.get() / numberOfTosses;
+//        double percentage = crazyDecimal * 100;
+        return 0.0;
+
+//        Dice dice = new Dice(numberOfDies);
+//        Double percentage = (double) (dice.tossAndSum() / numberOfTosses);
+//        System.out.println(percentage);
+//        double realPercentage = percentage *100;
+//        System.out.println(realPercentage);
+//        return realPercentage;
+    }
+
 
 }
 
